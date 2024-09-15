@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "module_test_flow"
+version = "0.2.0"
+description = ""
+authors = ["moarshy <marshath@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "module_test_flow", from="."}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
