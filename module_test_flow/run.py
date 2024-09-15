@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import json
-from module_test_template.schemas import InputSchema
-from module_test_template.utils import get_logger
+from module_test_flow.schemas import InputSchema
+from module_test_flow.utils import get_logger
 from naptha_sdk.task import Task as NapthaTask
 from naptha_sdk.utils import get_logger
 
