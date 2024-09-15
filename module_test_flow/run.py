@@ -39,7 +39,7 @@ async def run(
     task2 = NapthaTask(
         name='module_test_flow_2',
         fn='module_test_template',
-        worker_node=worker_nodes[1],
+        worker_node=worker_nodes[0],
         orchestrator_node=orchestrator_node,
         flow_run=flow_run
     )
