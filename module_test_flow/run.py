@@ -34,7 +34,13 @@ async def run(
         prompt=inputs.prompt,
     )
 
-    response1 = json.loads(response1)
+    if isinstance(response1, str):
+        response1 = json.loads(response1)
+    elif isinstance(response1, list):
+        response1 = response1[0]
+    else:
+        raise ValueError("Invalid response type")
+
     response1 = response1['modified_prompt']
 
     task2 = NapthaTask(
@@ -49,7 +55,13 @@ async def run(
         prompt=response1,
     )
 
-    response2 = json.loads(response2)
+    if isinstance(response2, str):  
+        response2 = json.loads(response2)
+    elif isinstance(response2, list):
+        response2 = response2[0]
+    else:
+        raise ValueError("Invalid response type")
+
     response2 = response2['modified_prompt']
 
     return response2
